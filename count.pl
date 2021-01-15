@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Data::Dumper;
 
-open(DAT, "out.txt");
+open(DAT, 'out.txt');
 chomp (my @z = <DAT>);
 close(DAT);
 
