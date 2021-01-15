@@ -1,6 +1,5 @@
 use strict;
 use warnings;
-use Data::Dumper;
 
 open(DAT, 'out.txt');
 chomp (my @z = <DAT>);
@@ -17,5 +16,7 @@ for my $i (@z) {
 }
 
 for (sort keys %cnt) {
-    printf "%-8s %s\n", $_, $cnt{$_};
+    printf "%-8s %-8s ", $_, $cnt{$_};
+    print "*" for 1..$cnt{$_};
+    print "\n";
 }
